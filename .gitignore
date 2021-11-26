@@ -39,7 +39,6 @@ Temporary Items
 *.pot
 *.pyc
 __pycache__/
-# settings.py
 db.sqlite3
 static/media
 migrations
