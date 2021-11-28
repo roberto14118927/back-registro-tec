@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     # Add lins
     'rest_framework',
     # Add Apps
-    'register'
+    'register',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200',
 ]
 
 ROOT_URLCONF = 'UPCH_HACK.urls'
@@ -87,8 +94,8 @@ WSGI_APPLICATION = 'UPCH_HACK.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'upchdb',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'upchdb',
         'USER': 'upchuser',
         'PASSWORD': 'upchpassword',
         'HOST': '13.58.174.2',
