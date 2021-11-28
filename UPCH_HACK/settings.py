@@ -47,6 +47,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',
+    'http://13.58.177.40'
 ]
 
 ROOT_URLCONF = 'UPCH_HACK.urls'
