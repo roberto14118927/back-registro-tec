@@ -11,6 +11,7 @@ class Register(models.Model):
     email = models.EmailField(max_length = 200, unique=True)
     institution = models.CharField(max_length=100)
     dirección = models.CharField(max_length=250)
+    status = models.BooleanField(default=False)
 
 
 class InstitutionModel(models.Model):
