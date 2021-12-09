@@ -6,4 +6,5 @@ from register import views
 
 urlpatterns = [
     re_path(r'^register/$', views.RegisterList.as_view()),
+    re_path(r'^teams/$', views.TeamsList.as_view()),
 ]

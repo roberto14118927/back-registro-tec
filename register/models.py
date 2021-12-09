@@ -16,3 +16,13 @@ class Register(models.Model):
 
 class InstitutionModel(models.Model):
     name = models.CharField(max_length=250)
+
+
+class Teams(models.Model):
+    idR = models.IntegerField()
+    nameTeam = models.CharField(max_length=250)
+    name = models.CharField(max_length=250)
+    lastName = models.CharField(max_length=250)
+    email = models.EmailField(max_length = 200)
+    status = models.BooleanField(default=False)
+    
